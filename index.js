@@ -1,7 +1,3 @@
-
-
-
-
 let books=[]
 let title=document.querySelector("#book")
 let author=document.querySelector("#author")
@@ -25,12 +21,17 @@ addbtn.addEventListener("click",()=>{
       </button>
       <hr>
     </div>`
+    localStorage.setItem("books",JSON.stringify(books)) 
     let removeBtn=document.querySelectorAll(".remove-btn")
-removeBtn.forEach(element => {element.addEventListener("click",()=>{
-  let parent=element.parentNode
-  parent.remove()
-  console.log(removeBtn)
-})})
+    removeBtn.forEach(element => {element.addEventListener("click",()=>{
+      let parent=element.parentNode
+      parent.remove()
+      console.log(books)
+      books = books.filter(x => x.name != parent.className)
+      console.log(books)
+      localStorage.setItem("books",JSON.stringify(books))
+    })
+  })
     i++
     ;
   }
