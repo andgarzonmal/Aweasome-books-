@@ -30,6 +30,7 @@ addbtn.addEventListener("click",()=>{
       books = books.filter(x => x.name != parent.className)
       console.log(books)
       localStorage.setItem("books",JSON.stringify(books))
+      i--
     })
   })
     i++
