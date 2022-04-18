@@ -3,7 +3,7 @@ let title=document.querySelector("#book")
 let author=document.querySelector("#author")
 const shelfbook=document.querySelector(".book-shelf")
 const addbtn=document.querySelector(".add-btn")
-
+const msg=document.querySelector(".msg")
 
 function show(books){
   books.forEach(element =>{
@@ -36,8 +36,9 @@ if(books != ""){
 
 addbtn.addEventListener("click",()=>{
   if(title.value ==="" || author.value ==="" ){
-    return
+    msg.classList.add("active")
   } else {
+    msg.classList.remove("active")
   let newtitle=title.value
   let newauthor=author.value
   books.push({name: newtitle, owner: newauthor})

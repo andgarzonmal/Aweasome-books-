@@ -9,3 +9,12 @@
   margin-top: 24px;
   width: 25%;
 }
+
+.msg{
+  color: red;
+  display: none;
+}
+
+.msg.active{
+display: block;
+}
