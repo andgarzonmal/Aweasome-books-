@@ -24,13 +24,12 @@ addbtn.addEventListener("click",()=>{
     </div>`
     let removeBtn=document.querySelector(`#button${i}`)
     removeBtns.push(removeBtn)
-    console.log(removeBtns)
     i++
     ;
   }
 })
 
-removeBtns
+console.log(removeBtns)
 
 
 
