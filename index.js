@@ -1,8 +1,24 @@
-let books=[]
+let books = JSON.parse(localStorage.getItem('books'));
 let title=document.querySelector("#book")
 let author=document.querySelector("#author")
 const shelfbook=document.querySelector(".book-shelf")
 const addbtn=document.querySelector(".add-btn")
+
+function show(books){
+  books.forEach(element =>{
+    shelfbook.innerHTML+= `
+    <div class="${element.name}">
+      <h2>${element.name}</h2>
+      <p>${element.owner}</p>
+      <button class="remove-btn">
+        Remove
+      </button>
+      <hr>
+    </div>`
+  })
+}
+
+show(books)
 
 addbtn.addEventListener("click",()=>{
   if(title.value ==="" || author.value ==="" ){
