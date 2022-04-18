@@ -3,8 +3,7 @@ let title=document.querySelector("#book")
 let author=document.querySelector("#author")
 const shelfbook=document.querySelector(".book-shelf")
 const addbtn=document.querySelector(".add-btn")
-let i=0
-let removeBtns = []
+let i=0 
 
 addbtn.addEventListener("click",()=>{
   if(title.value ==="" || author.value ==="" ){
@@ -22,16 +21,16 @@ addbtn.addEventListener("click",()=>{
       </button>
       <hr>
     </div>`
-    let removeBtn=document.querySelector(`#button${i}`)
-    removeBtns.push(removeBtn)
-    console.log(removeBtns)
+    let removeBtn=document.querySelectorAll(".remove-btn")
+removeBtn.forEach(element => {element.addEventListener("click",()=>{
+  let parent=element.parentNode
+  parent.remove()
+  console.log(removeBtn)
+})})
     i++
     ;
   }
 })
-
-removeBtns
-
 
 
 
