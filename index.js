@@ -21,17 +21,28 @@ addbtn.addEventListener("click",()=>{
       </button>
       <hr>
     </div>`
+<<<<<<< HEAD
     let removeBtn=document.querySelectorAll(".remove-btn")
 removeBtn.forEach(element => {element.addEventListener("click",()=>{
   let parent=element.parentNode
   parent.remove()
   console.log(removeBtn)
 })})
+=======
+    let removeBtn=document.querySelector(`#button${i}`)
+    removeBtns.push(removeBtn)
+>>>>>>> abee9df3d55f7d970c3d4176492a854c1e639030
     i++
     ;
   }
 })
 
+<<<<<<< HEAD
+=======
+console.log(removeBtns)
+
+
+>>>>>>> abee9df3d55f7d970c3d4176492a854c1e639030
 
 
 
