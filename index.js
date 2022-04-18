@@ -4,6 +4,7 @@ let author=document.querySelector("#author")
 const shelfbook=document.querySelector(".book-shelf")
 const addbtn=document.querySelector(".add-btn")
 
+
 function show(books){
   books.forEach(element =>{
     shelfbook.innerHTML+= `
@@ -19,6 +20,19 @@ function show(books){
 }
 
 show(books)
+if(books != ""){
+  let removeBtn=document.querySelectorAll(".remove-btn")
+  removeBtn.forEach(element => {element.addEventListener("click",()=>{
+    let parent=element.parentNode
+    parent.remove()
+    console.log(books)
+    books = books.filter(x => x.name != parent.className)
+    console.log(books)
+    localStorage.setItem("books",JSON.stringify(books))
+  })
+}) 
+}
+
 
 addbtn.addEventListener("click",()=>{
   if(title.value ==="" || author.value ==="" ){
