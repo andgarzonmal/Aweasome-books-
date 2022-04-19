@@ -33,7 +33,7 @@ if (books !== '') {
   });
 }
 
-function add(){
+function add() {
   const newtitle = title.value;
   const newauthor = author.value;
   books.push({ name: newtitle, owner: newauthor });
@@ -49,10 +49,10 @@ function add(){
   localStorage.setItem('books', JSON.stringify(books));
 }
 
-function remove(parent){
+function remove(parent) {
   parent.remove();
-        books = books.filter((x) => x.name !== parent.className);
-        localStorage.setItem('books', JSON.stringify(books));
+  books = books.filter((x) => x.name !== parent.className);
+  localStorage.setItem('books', JSON.stringify(books));
 }
 addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
@@ -65,7 +65,7 @@ addbtn.addEventListener('click', () => {
     removeBtn.forEach((element) => {
       element.addEventListener('click', () => {
         const parent = element.parentNode;
-        remove(parent)
+        remove(parent);
       });
     });
   }
