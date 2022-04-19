@@ -5,7 +5,9 @@ const shelfbook = document.querySelector('.book-shelf');
 const addbtn = document.querySelector('.add-btn');
 const msga = document.querySelector('.msga');
 const msgb = document.querySelector('.msgb');
+
 function show(books) {
+if(books.length>0){   
   books.forEach((element) => {
     shelfbook.innerHTML += `
     <div class="${element.name}">
@@ -16,9 +18,10 @@ function show(books) {
       </button>
       <hr>
     </div>`;
-  });
+    });
+  } else {return
+    }
 }
-
 show(books);
 
 if (books !== '') {
