@@ -1,13 +1,51 @@
-.user-input {
+body {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-shelf {
+  border: solid 2px black;
+  flex-direction: column;
+  width: 80%;
+  display: flex;
+}
+
+.book-shelf > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.book-shelf > *:nth-child(odd) {
+  background-color: rgb(177, 161, 161);
+}
+
+.book-shelf > * h2 {
+  font-size: 14px;
+}
+
+.line {
+  height: 2px;
+  background-color: black;
+  width: 40%;
+}
+
+.user-input {
   flex-direction: column;
   max-width: 300px;
   gap: 12px;
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
 }
 
 .add-btn {
-  margin-top: 24px;
   width: 25%;
+  align-self: flex-end;
 }
 
 .msga {
