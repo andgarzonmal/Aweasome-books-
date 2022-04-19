@@ -7,9 +7,9 @@ const msga = document.querySelector('.msga');
 const msgb = document.querySelector('.msgb');
 
 function show(books) {
-if(books.length>0){   
-  books.forEach((element) => {
-    shelfbook.innerHTML += `
+  if (books.length > 0) {
+    books.forEach((element) => {
+      shelfbook.innerHTML += `
     <div class="${element.name}">
       <h2>${element.name}</h2>
       <p>${element.owner}</p>
@@ -19,8 +19,7 @@ if(books.length>0){
       <hr>
     </div>`;
     });
-  } else {return
-    }
+  }
 }
 show(books);
 
