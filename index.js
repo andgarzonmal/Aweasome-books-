@@ -9,12 +9,10 @@ class Bookshelf {
     this.book.push({ name: newtitle, owner: newauthor });
     shelfbook.innerHTML += `
     <div class="${newtitle}">
-      <h2>${newtitle}</h2>
-      <p>${newauthor}</p>
+      <h2>"${newtitle}" by ${newauthor}</h2>
       <button class="remove-btn">
         Remove
       </button>
-      <hr>
     </div>`;
     localStorage.setItem('books', JSON.stringify(this.book));
   }
@@ -42,12 +40,10 @@ if (books.book != null) {
   books.book.forEach((element) => {
     shelfbook.innerHTML += `
     <div class="${element.name}">
-      <h2>${element.name}</h2>
-      <p>${element.owner}</p>
+      <h2>"${element.name}" by ${element.owner}</h2>
       <button class="remove-btn">
         Remove
       </button>
-      <hr>
     </div>`;
   });
 }
