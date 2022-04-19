@@ -35,11 +35,9 @@ if (books !== '') {
 addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
     msga.classList.add('active');
-  }else if(books.filter(element => element.name == title.value)!="")
-    msgb.classList.add("active")
-  else{
+  } else if (books.filter((element) => element.name === title.value) !== '') { msgb.classList.add('active'); } else {
     msga.classList.remove('active');
-    msgb.classList.remove("active")
+    msgb.classList.remove('active');
     const newtitle = title.value;
     const newauthor = author.value;
     books.push({ name: newtitle, owner: newauthor });
