@@ -3,8 +3,8 @@ const title = document.querySelector('#book');
 const author = document.querySelector('#author');
 const shelfbook = document.querySelector('.book-shelf');
 const addbtn = document.querySelector('.add-btn');
-const msg = document.querySelector('.msg');
-
+const msga = document.querySelector('.msga');
+const msgb = document.querySelector('.msgb');
 function show(books) {
   books.forEach((element) => {
     shelfbook.innerHTML += `
@@ -34,9 +34,12 @@ if (books !== '') {
 
 addbtn.addEventListener('click', () => {
   if (title.value === '' || author.value === '') {
-    msg.classList.add('active');
-  } else {
-    msg.classList.remove('active');
+    msga.classList.add('active');
+  }else if(books.filter(element => element.name == title.value)!="")
+    msgb.classList.add("active")
+  else{
+    msga.classList.remove('active');
+    msgb.classList.remove("active")
     const newtitle = title.value;
     const newauthor = author.value;
     books.push({ name: newtitle, owner: newauthor });
