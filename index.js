@@ -1,11 +1,15 @@
-let books = JSON.parse(localStorage.getItem('books'));
+let books = [];
+const bookstorage = JSON.parse(localStorage.getItem('books'));
+if (bookstorage != null) {
+  books = bookstorage;
+}
 const title = document.querySelector('#book');
 const author = document.querySelector('#author');
 const shelfbook = document.querySelector('.book-shelf');
 const addbtn = document.querySelector('.add-btn');
 const msga = document.querySelector('.msga');
 const msgb = document.querySelector('.msgb');
-function show(books) {
+if (books != null) {
   books.forEach((element) => {
     shelfbook.innerHTML += `
     <div class="${element.name}">
@@ -18,8 +22,6 @@ function show(books) {
     </div>`;
   });
 }
-
-show(books);
 
 if (books !== '') {
   const removeBtn = document.querySelectorAll('.remove-btn');
