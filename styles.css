@@ -10,11 +10,11 @@
   width: 25%;
 }
 
-.msg{
+.msg {
   color: red;
   display: none;
 }
 
-.msg.active{
-display: block;
+.msg.active {
+  display: block;
 }
