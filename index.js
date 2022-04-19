@@ -58,8 +58,7 @@ addbtn.addEventListener("click",()=>{
       let parent=element.parentNode
       parent.remove()
       console.log(books)
-      books = books.filter((x,index) => {x.name != parent.className
-        return index})
+      books = books.filter(x => x.name != parent.className)
       console.log(books)
       localStorage.setItem("books",JSON.stringify(books))
     })
