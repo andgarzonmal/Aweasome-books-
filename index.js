@@ -72,4 +72,3 @@ addbtn.addEventListener('click', () => {
     });
   }
 });
-
