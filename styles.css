@@ -1,0 +1,29 @@
+.user-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 12px;
+}
+
+.add-btn {
+  margin-top: 24px;
+  width: 25%;
+}
+
+.msga {
+  color: red;
+  display: none;
+}
+
+.msga.active {
+  display: block;
+}
+
+.msgb {
+  color: red;
+  display: none;
+}
+
+.msgb.active {
+  display: block;
+}
