@@ -26,7 +26,8 @@ if(books != ""){
     let parent=element.parentNode
     parent.remove()
     console.log(books)
-    books = books.filter(x => x.name != parent.className)
+    books = books.filter((x,index) => {x.name != parent.className
+      return index})
     console.log(books)
     localStorage.setItem("books",JSON.stringify(books))
   })
@@ -57,7 +58,8 @@ addbtn.addEventListener("click",()=>{
       let parent=element.parentNode
       parent.remove()
       console.log(books)
-      books = books.filter(x => x.name != parent.className)
+      books = books.filter((x,index) => {x.name != parent.className
+        return index})
       console.log(books)
       localStorage.setItem("books",JSON.stringify(books))
     })
