@@ -29,6 +29,9 @@ const bookstorage = JSON.parse(localStorage.getItem('books'));
 if (bookstorage != null) {
   books.book = bookstorage;
 }
+
+
+
 const title = document.querySelector('#book');
 const author = document.querySelector('#author');
 const shelfbook = document.querySelector('.book-shelf');
@@ -39,6 +42,22 @@ const listtitle=document.querySelector("header");
 const userinput=document.querySelector(".user-input");
 const contact=document.querySelector(".contact")
 const navitems=document.querySelectorAll(".ul-nav li")
+const daytime=document.querySelector(".date p");
+
+
+function currenttime(){
+var today = new Date();
+let montharr=["January","February","March","April","May","June","July","August","September","October","November","December"]
+let month=today.getMonth()
+month=montharr[month]
+var date = month+' '+today.getDate()+' '+today.getFullYear(); 
+var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+var dateTime = date+' '+time;
+daytime.textContent=dateTime
+}
+setInterval(currenttime, 1000);
+
+
 
 navitems.forEach((element,index) => {element.addEventListener("click",()=>{
   if(index==0){
