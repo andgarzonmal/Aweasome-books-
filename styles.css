@@ -7,19 +7,20 @@ body {
 
 .list-nav {
   list-style: none;
-  cursor:pointer;
+  cursor: pointer;
 }
 
-header{
+header {
   display: block;
 }
 
-header.active{
-  display:none;
+header.active {
+  display: none;
 }
-.nav  {
+
+.nav {
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   width: 90%;
   margin: 12px;
@@ -40,7 +41,7 @@ header.active{
 .nav-items2 {
   border-left: solid 2px blue;
   border-right: solid 2px blue;
-  padding: 0px 10px;
+  padding: 0 10px;
 }
 
 .date {
@@ -58,7 +59,7 @@ header.active{
   display: flex;
 }
 
-.book-shelf.active{
+.book-shelf.active {
   display: none;
 }
 
@@ -93,9 +94,10 @@ header.active{
   align-items: center;
 }
 
-.user-input.active{
+.user-input.active {
   display: flex;
 }
+
 .add-btn {
   width: 25%;
   align-self: flex-end;
@@ -119,17 +121,18 @@ header.active{
   display: block;
 }
 
-.contact{
-  display:none;
+.contact {
+  display: none;
 }
 
-.contact.active{
-  display:block;
+.contact.active {
+  display: block;
 }
 
 .contact h1 {
   text-align: center;
 }
+
 .copyright {
   width: 90%;
   margin: 12px;
@@ -140,4 +143,3 @@ header.active{
 .copyright p {
   padding-left: 50px;
 }
-
