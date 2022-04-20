@@ -2,7 +2,45 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  height: 100vh;
+}
+
+.list-nav {
+  list-style: none;
+}
+
+.nav  {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  width: 90%;
+  margin: 12px;
+  border: solid 2px black;
+}
+
+.logo {
+  margin-left: 50px;
+}
+
+.ul-nav {
+  display: flex;
+  margin-right: 50px;
+  justify-content: space-between;
+  column-gap: 10px;
+}
+
+.nav-items2 {
+  border-left: solid 2px blue;
+  border-right: solid 2px blue;
+  padding: 0px 10px;
+}
+
+.date {
+  width: 90%;
+}
+
+.date p {
+  text-align: right;
 }
 
 .book-shelf {
@@ -65,3 +103,15 @@ body {
 .msgb.active {
   display: block;
 }
+
+.copyright {
+  width: 90%;
+  margin: 12px;
+  border: solid 2px black;
+  justify-self: flex-end;
+}
+
+.copyright p {
+  padding-left: 50px;
+}
+
