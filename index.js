@@ -43,7 +43,9 @@ const userinput=document.querySelector(".user-input");
 const contact=document.querySelector(".contact")
 const navitems=document.querySelectorAll(".ul-nav li")
 const daytime=document.querySelector(".date p");
-
+const nav1=document.querySelector(".nav-items1");
+const nav2=document.querySelector(".nav-items2");
+const nav3=document.querySelector(".nav-items3");
 
 function currenttime(){
 var today = new Date();
@@ -65,6 +67,7 @@ navitems.forEach((element,index) => {element.addEventListener("click",()=>{
     shelfbook.classList.remove("active")
     contact.classList.remove("active")
     userinput.classList.remove("active")
+    
   }else if(index==1){
     listtitle.classList.add("active")
     shelfbook.classList.add("active")
