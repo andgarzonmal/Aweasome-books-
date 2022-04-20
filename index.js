@@ -35,6 +35,31 @@ const shelfbook = document.querySelector('.book-shelf');
 const addbtn = document.querySelector('.add-btn');
 const msga = document.querySelector('.msga');
 const msgb = document.querySelector('.msgb');
+const listtitle=document.querySelector("header");
+const userinput=document.querySelector(".user-input");
+const contact=document.querySelector(".contact")
+const navitems=document.querySelectorAll(".ul-nav li")
+
+navitems.forEach((element,index) => {element.addEventListener("click",()=>{
+  if(index==0){
+    listtitle.classList.remove("active")
+    shelfbook.classList.remove("active")
+    contact.classList.remove("active")
+    userinput.classList.remove("active")
+  }else if(index==1){
+    listtitle.classList.add("active")
+    shelfbook.classList.add("active")
+    contact.classList.remove("active")
+    userinput.classList.add("active")
+  }else if(index==2){
+    listtitle.classList.add("active")
+    shelfbook.classList.add("active")
+    contact.classList.add("active")
+    userinput.classList.remove("active")
+  }
+}
+)})
+
 
 if (books.book != null) {
   books.book.forEach((element) => {

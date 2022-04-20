@@ -9,6 +9,13 @@ body {
   list-style: none;
 }
 
+header{
+  display: block;
+}
+
+header.active{
+  display:none;
+}
 .nav  {
   display: flex;
   justify-content:space-between;
@@ -50,6 +57,10 @@ body {
   display: flex;
 }
 
+.book-shelf.active{
+  display: none;
+}
+
 .book-shelf > * {
   display: flex;
   justify-content: space-between;
@@ -77,10 +88,13 @@ body {
   max-width: 300px;
   gap: 12px;
   margin-top: 24px;
-  display: flex;
+  display: none;
   align-items: center;
 }
 
+.user-input.active{
+  display: flex;
+}
 .add-btn {
   width: 25%;
   align-self: flex-end;
@@ -104,6 +118,17 @@ body {
   display: block;
 }
 
+.contact{
+  display:none;
+}
+
+.contact.active{
+  display:block;
+}
+
+.contact h1 {
+  text-align: center;
+}
 .copyright {
   width: 90%;
   margin: 12px;
